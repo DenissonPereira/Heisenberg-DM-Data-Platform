@@ -3,6 +3,8 @@ import { ThemeProvider } from "styled-components"
 import { darkTheme, lightTheme } from "./core"
 import { Container } from "./styles"
 import { GlobalStyles } from "./core"
+import { HDMProvider } from "./contexts"
+import { RoutesApp } from "./routes"
 
 
 export function App() {
@@ -17,8 +19,9 @@ export function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Container>
-        Hello world
-        <button onClick={themeToggler}>botao</button>
+        <HDMProvider>
+          <RoutesApp />
+        </HDMProvider>
       </Container>
     </ThemeProvider>
   )
