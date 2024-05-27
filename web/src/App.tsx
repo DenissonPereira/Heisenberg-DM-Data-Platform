@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { ThemeProvider } from "styled-components"
-import { darkTheme, lightTheme } from "./darktheme"
+import { darkTheme, lightTheme } from "./core"
 import { Container } from "./styles"
-import { GlobalStyles } from "./globalStyles"
+import { GlobalStyles } from "./core"
 
 
-function App() {
+export function App() {
 
   const [theme, setTheme] = useState("light")
 
