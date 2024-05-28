@@ -1,6 +1,9 @@
+import HomeBTN from "../../../components/btn"
 
 export const Login = () => {
   return (
-    <div>login</div>
+    <div>login
+        <HomeBTN />
+    </div>
   )
 }

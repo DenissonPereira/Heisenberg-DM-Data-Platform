@@ -1,11 +1,15 @@
-export const lightTheme = {
-    body: '#fff',
-    FontColor: '#000',
-    div: 'green'
-}
+export const Light = {
+  colors: {
+    bg: "#FFFFFF",
+    text: "#000000",
+  },
+};
 
-export const darkTheme = {
-    body: '#000',
-    fontColor: '#fff',
-    div: 'red'
-}
+export const Dark = {
+  colors: {
+    bg: "#000000",
+    text: "#FFFFFF",
+  },
+};
+
+export type ThemeType = typeof Light;

@@ -1,4 +1,4 @@
-import { useGlobalHDMContext } from "../contexts"
+import { useGlobalHDMContext } from "../contexts/HDMContext"
 import { BrowserRouter } from 'react-router-dom'
 import { IsUser } from './IsUser'
 import { NotUser } from './NotUser'
