@@ -4,6 +4,7 @@ import { Dark, Light, ThemeType } from '../core';
 
 interface ThemeContextProps {
   toggleTheme: () => void;
+  themeScheme: 'light' | 'dark';
 }
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
@@ -29,7 +30,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ toggleTheme }}>
+    <ThemeContext.Provider value={{ toggleTheme, themeScheme }}>
       <StyledThemeProvider theme={theme as DefaultTheme}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   );

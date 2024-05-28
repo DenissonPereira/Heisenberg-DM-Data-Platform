@@ -1,9 +1,9 @@
-import HomeBTN from "../../../components/btn"
+import { BotaoTrocarTema } from "../../../components/shared/botaoTrocarTema"
 
 export const Login = () => {
   return (
     <div>login
-        <HomeBTN />
+        <BotaoTrocarTema />
     </div>
   )
 }
