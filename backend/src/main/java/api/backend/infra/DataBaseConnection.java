@@ -15,7 +15,7 @@ public class DataBaseConnection {
         dataSourceUsuarios.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSourceUsuarios.setUrl("jdbc:mysql://localhost:3306/heisenberg_dm_data_platform");
         dataSourceUsuarios.setUsername("root");
-        dataSourceUsuarios.setPassword("123456");
+        dataSourceUsuarios.setPassword("123456Ok!");
 
         this.connectionUsuario = new JdbcTemplate(dataSourceUsuarios);
     }
