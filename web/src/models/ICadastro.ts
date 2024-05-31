@@ -1,5 +1,4 @@
-export interface IUser {
-    id: number
+export interface ICadastro {
     nome: string
     sobrenome: string
     login: string

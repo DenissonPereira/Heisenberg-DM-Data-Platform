@@ -1,5 +1,7 @@
-import bg_light from '../../assets/images/bg_login.png'
-import bg_dark from '../../assets/images/bg_Dark.png'
+import bg_login_light from '../../assets/images/bg_login_light.png'
+import bg_login_dark from '../../assets/images/bg_login_dark.png'
+import bg_cadastro_light from '../../assets/images/bg_cadastro_light.png'
+import bg_cadastro_dark from '../../assets/images/bg_cadastro_dark.png'
 
 export const Light = {
   colors: {
@@ -18,7 +20,8 @@ export const Light = {
     cinza: '#A8A8A8',
   },
   images: {
-    bg: bg_light,
+    bg_login: bg_login_light,
+    bg_cadastro: bg_cadastro_light,
   },
 };
 
@@ -39,7 +42,8 @@ export const Dark = {
     cinza: '#A8A8A8',
   },
   images: {
-    bg: bg_dark,
+    bg_login: bg_login_dark,
+    bg_cadastro: bg_cadastro_dark,
   },
 };
 

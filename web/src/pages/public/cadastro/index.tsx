@@ -1,6 +1,13 @@
+import { Form } from "./components/form"
+import { CadastroContainer, Left, Right } from "./styles"
 
 export const Cadastro = () => {
   return (
-    <div>Cadastro</div>
+    <CadastroContainer>
+      <Left></Left>
+      <Right>
+        <Form />
+      </Right>
+    </CadastroContainer>
   )
 }

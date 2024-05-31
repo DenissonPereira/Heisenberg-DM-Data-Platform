@@ -2,60 +2,66 @@
   "hash": "93c81f8b",
   "configHash": "fccfe8f8",
   "lockfileHash": "61dc93e6",
-  "browserHash": "e248eea6",
+  "browserHash": "63af23f7",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "46e909da",
+      "fileHash": "646dd43f",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "0d59a3a2",
+      "fileHash": "319a8d20",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "84592a3c",
+      "fileHash": "97d151f9",
       "needsInterop": true
     },
     "styled-components": {
       "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "styled-components.js",
-      "fileHash": "dd487b08",
+      "fileHash": "3c26bd09",
       "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "8cbf4119",
+      "fileHash": "638b2bad",
       "needsInterop": false
     },
     "react-icons/fc": {
       "src": "../../node_modules/react-icons/fc/index.mjs",
       "file": "react-icons_fc.js",
-      "fileHash": "5695f97c",
+      "fileHash": "67cf735b",
       "needsInterop": false
     },
     "react-icons/fa": {
       "src": "../../node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "b8b5f406",
+      "fileHash": "53c163cc",
       "needsInterop": false
     },
     "react-router": {
       "src": "../../node_modules/react-router/dist/index.js",
       "file": "react-router.js",
-      "fileHash": "8433c347",
+      "fileHash": "4104bc98",
       "needsInterop": false
     },
     "axios": {
       "src": "../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "d46a31a5",
+      "fileHash": "16a04634",
+      "needsInterop": false
+    },
+    "react-icons/fa6": {
+      "src": "../../node_modules/react-icons/fa6/index.mjs",
+      "file": "react-icons_fa6.js",
+      "fileHash": "96bfdeea",
       "needsInterop": false
     }
   },

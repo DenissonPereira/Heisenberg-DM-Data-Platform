@@ -5,30 +5,13 @@ import { CheckBox, EsqueceuSenha, FormStyle, InputContainer, RememberContainer, 
 import { BotaoPrincipal } from '../../../../../components/custom/BotaoPrincipal.style';
 import { BotaoSecundario } from '../../../../../components/custom/BotaoSecundario.style';
 import { useMostrarSenha } from '../../../../../hooks/useMostrarSenha';
-import { useNavigate } from 'react-router';
-import { loginService } from '../../../../../services/loginService';
-import { useState } from 'react';
-import { useGlobalHDMContext } from '../../../../../contexts/HDMContext';
+import { useHandleLogin } from '../../../../../hooks/useHangleLogin';
 
 
 export const Form = () => {
-    
-    const navigate = useNavigate()
-    const { verSenha, mostrarSenha } = useMostrarSenha()
 
-    const { setUsuario } = useGlobalHDMContext()
-
-    const [login, setLogin] = useState<string>('')
-    const [senha, setSenha] = useState<string>('')
-
-    async function handleLogin() {
-        event?.preventDefault()
-        const data = await loginService(login, senha, setUsuario)
-        console.log(data)
-
-        if (data.usuario) navigate('/home')
-        else alert(data)
-    }
+    const {verSenha, mostrarSenha} = useMostrarSenha()
+    const {login, setLogin, senha, setSenha, handleLogin, navigate} = useHandleLogin()
 
     return (
         <FormStyle onSubmit={handleLogin}>
@@ -70,7 +53,7 @@ export const Form = () => {
                 <EsqueceuSenha>Esqueceu a Senha?</EsqueceuSenha>
             </RememberContainer>
             <BotaoPrincipal type='submit'>ENTRAR</BotaoPrincipal>
-            <BotaoSecundario type='button'>CADASTRAR</BotaoSecundario>
+            <BotaoSecundario onClick={() => navigate('/cadastro')} type='button'>CADASTRAR</BotaoSecundario>
         </FormStyle>
     )
 }

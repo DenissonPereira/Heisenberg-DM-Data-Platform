@@ -10,7 +10,7 @@ export const LoginContainer = styled.div`
 export const Left = styled.div`
   width: 70%;
   height: 100vh;
-  background-image: url(${props => props.theme.images.bg});
+  background-image: url(${props => props.theme.images.bg_login});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
