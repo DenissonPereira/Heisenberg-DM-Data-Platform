@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { StyleSheetManager } from 'styled-components';
 import { useTheme } from '../../../contexts/themeContext';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
@@ -39,13 +39,15 @@ export const BotaoTrocarTema = () => {
   const isDarkMode = themeScheme === 'dark';
 
   return (
-    <Container>
-      <ToggleButton isDarkMode={isDarkMode} onClick={toggleTheme}>
-        <ToggleCircle isDarkMode={isDarkMode}>
-          {isDarkMode ? <FaMoon color="#fff" /> : <FaSun color="#000" />}
-        </ToggleCircle>
-      </ToggleButton>
-    </Container>
+    <StyleSheetManager shouldForwardProp={(prop) => !prop.startsWith("isDarkMode")}>
+      <Container>
+        <ToggleButton isDarkMode={isDarkMode} onClick={toggleTheme}>
+          <ToggleCircle isDarkMode={isDarkMode}>
+            {isDarkMode ? <FaMoon color="#fff" /> : <FaSun color="#000" />}
+          </ToggleCircle>
+        </ToggleButton>
+      </Container>
+    </StyleSheetManager>
   );
 };
 

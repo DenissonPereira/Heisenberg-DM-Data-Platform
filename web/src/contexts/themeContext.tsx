@@ -22,11 +22,16 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [themeScheme, setThemeScheme] = useState<'light' | 'dark'>('light');
+  const [themeScheme, setThemeScheme] = useState<'light' | 'dark'>(
+    () => (localStorage.getItem('themeScheme') as 'light' | 'dark') || 'light'
+  );
+
   const theme: ThemeType = useMemo(() => (themeScheme === 'dark' ? Dark : Light), [themeScheme]);
 
   const toggleTheme = () => {
-    setThemeScheme(prevScheme => (prevScheme === 'dark' ? 'light' : 'dark'));
+    const newThemeScheme = themeScheme === 'dark' ? 'light' : 'dark';
+    setThemeScheme(newThemeScheme);
+    localStorage.setItem('themeScheme', newThemeScheme);
   };
 
   return (
