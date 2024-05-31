@@ -1,18 +1,13 @@
-import { BordaInputs } from "../../../../../components/custom/BordaInputs.style"
 import { FcBusinessman, FcAddressBook, FcConferenceCall, FcReading, FcUnlock, FcPhone, FcDepartment, FcLock } from "react-icons/fc";
 import { CheckBox, CheckContainer, ForcaSenha, FormStyle, Forte, Fraca, InputContainer, Media, Senha, Vazia } from "./styles"
 import { FaMapLocationDot } from "react-icons/fa6";
-import { InputFormulario } from "../../../../../components/custom/Inputs.style";
-import { useMostrarSenha } from "../../../../../hooks/useMostrarSenha";
 import { forcaDaSenha } from "../../../../../utils/helpers/forcaDaSenha";
-import { BotaoPrincipal } from "../../../../../components/custom/BotaoPrincipal.style";
-import { BotaoSecundario } from "../../../../../components/custom/BotaoSecundario.style";
-import { useHangleCadastro } from "../../../../../hooks/useHangleCadastro";
-
+import { BotaoSecundario, BotaoPrincipal, InputFormulario, BordaInputs } from "../../../../../components";
+import { useHangleCadastro, useMostrarSenha } from "../../../../../hooks";
 
 export const Form = () => {
 
-    const {nome, setNome, sobrenome, setSobrenome, login, setLogin, email, setEmail, senha, setSenha, telefone, setTelefone, endereco, setEndereco, cidade, setCidade, estado, setEstado, pais, setPais, handleCadastro} = useHangleCadastro()
+    const {nome, setNome, sobrenome, setSobrenome, login, setLogin, email, setEmail, senha, setSenha, telefone, setTelefone, endereco, setEndereco, cidade, setCidade, estado, setEstado, pais, setPais, handleCadastro, navigate} = useHangleCadastro()
 
     const forca = forcaDaSenha(senha)
 
@@ -165,7 +160,7 @@ export const Form = () => {
                 </CheckBox>
             </CheckContainer>
             <BotaoPrincipal type="submit">CADASTRAR</BotaoPrincipal>
-            <BotaoSecundario type="button">VOLTAR</BotaoSecundario>
+            <BotaoSecundario type="button" onClick={() => navigate('/')}>VOLTAR</BotaoSecundario>
         </FormStyle>
     )
 }
