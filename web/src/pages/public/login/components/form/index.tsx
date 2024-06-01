@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useMostrarSenha, useHandleLogin } from "../../../../../hooks";
 import { BotaoPrincipal, BotaoSecundario, BordaInputs, InputFormulario } from "../../../../../components";
 import { FcBusinessman, FcLock, FcUnlock } from "react-icons/fc";
 import { CheckBox, EsqueceuSenha, FormStyle, InputContainer, RememberContainer, Senha, TituloInput } from "./styles";
+import Loading from "../../../../../components/shared/loading";
 
 export const Form = () => {
   const { verSenha, mostrarSenha } = useMostrarSenha();
-  const { login, setLogin, senha, setSenha, handleLogin, navigate } = useHandleLogin();
+  const { login, setLogin, senha, setSenha, handleLogin, navigate, loading } = useHandleLogin();
 
   // Função para salvar os dados do usuário no localStorage
   const salvarDadosUsuario = () => {
@@ -25,7 +26,7 @@ export const Form = () => {
   };
 
   // Checa se os dados do usuário devem ser carregados ao iniciar o componente
-  React.useEffect(() => {
+  useEffect(() => {
     const rememberMe = localStorage.getItem("rememberMe") === "true";
     if (rememberMe) {
       carregarDadosUsuario();
@@ -43,6 +44,10 @@ export const Form = () => {
     }
     localStorage.setItem("rememberMe", isChecked.toString());
   };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <FormStyle onSubmit={handleLogin}>

@@ -1,23 +1,24 @@
-import { useState } from "react"
-import { useNavigate } from "react-router"
-import { loginService } from "../services/loginService"
-import { useGlobalHDMContext } from "../contexts/HDMContext"
+import { useNavigate } from "react-router";
+import { loginService } from "../services/loginService";
+import { useGlobalHDMContext } from "../contexts/HDMContext";
+import { useState } from "react";
 
 export const useHandleLogin = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { setUsuario } = useGlobalHDMContext();
+  const [login, setLogin] = useState<string>('');
+  const [senha, setSenha] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
-    const { setUsuario } = useGlobalHDMContext()
-    const [login, setLogin] = useState<string>('')
-    const [senha, setSenha] = useState<string>('')
+  async function handleLogin(event?: React.FormEvent<HTMLFormElement>) {
+    event?.preventDefault();
+    setLoading(true);
+    const data = await loginService(login, senha, setUsuario);
+    setLoading(false);
 
-    async function handleLogin() {
-        event?.preventDefault()
-        const data = await loginService(login, senha, setUsuario)
-        console.log(data)
+    if (data.usuario) navigate('/');
+    else alert(data);
+  }
 
-        if (data.usuario) navigate('/')
-        else alert(data)
-    }
-
-    return {login, setLogin, senha, setSenha, handleLogin, navigate}
-}
+  return { login, setLogin, senha, setSenha, handleLogin, navigate, loading };
+};
