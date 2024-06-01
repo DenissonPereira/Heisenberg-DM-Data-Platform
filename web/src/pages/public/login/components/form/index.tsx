@@ -1,10 +1,6 @@
 import React from "react";
-import { useMostrarSenha } from "../../../../../hooks/useMostrarSenha";
-import { useHandleLogin } from "../../../../../hooks/useHangleLogin";
-import { BotaoPrincipal } from "../../../../../components/custom/BotaoPrincipal.style";
-import { BotaoSecundario } from "../../../../../components/custom/BotaoSecundario.style";
-import { BordaInputs } from "../../../../../components/custom/BordaInputs.style";
-import { InputFormulario } from "../../../../../components/custom/Inputs.style";
+import { useMostrarSenha, useHandleLogin } from "../../../../../hooks";
+import { BotaoPrincipal, BotaoSecundario, BordaInputs, InputFormulario } from "../../../../../components";
 import { FcBusinessman, FcLock, FcUnlock } from "react-icons/fc";
 import { CheckBox, EsqueceuSenha, FormStyle, InputContainer, RememberContainer, Senha, TituloInput } from "./styles";
 
