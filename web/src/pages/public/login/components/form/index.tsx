@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useMostrarSenha, useHandleLogin } from "../../../../../hooks";
-import { BotaoPrincipal, BotaoSecundario, BordaInputs, InputFormulario } from "../../../../../components";
+import { BotaoPrincipal, BotaoSecundario, BordaInputs, InputFormulario, Loading } from "../../../../../components";
 import { FcBusinessman, FcLock, FcUnlock } from "react-icons/fc";
 import { CheckBox, EsqueceuSenha, FormStyle, InputContainer, RememberContainer, Senha, TituloInput } from "./styles";
-import Loading from "../../../../../components/shared/loading";
 
 export const Form = () => {
   const { verSenha, mostrarSenha } = useMostrarSenha();

@@ -31,11 +31,9 @@ const LoadingText = styled.p`
   margin-bottom: 16px;
 `;
 
-const Loading = () => (
+export const Loading = () => (
   <LoadingContainer>
     <LoadingText>Carregando...</LoadingText>
     <Spinner />
   </LoadingContainer>
 );
-
-export default Loading;
