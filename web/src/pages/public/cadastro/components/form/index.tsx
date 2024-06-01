@@ -1,13 +1,14 @@
-import { FcBusinessman, FcAddressBook, FcConferenceCall, FcReading, FcUnlock, FcPhone, FcDepartment, FcLock } from "react-icons/fc";
+import { FcBusinessman, FcAddressBook, FcConferenceCall, FcReading, FcUnlock, FcPhone, FcDepartment, FcLock, FcCheckmark } from "react-icons/fc";
 import { CheckBox, CheckContainer, ForcaSenha, FormStyle, Forte, Fraca, InputContainer, Media, Senha, Vazia } from "./styles"
 import { FaMapLocationDot } from "react-icons/fa6";
 import { forcaDaSenha } from "../../../../../utils/helpers/forcaDaSenha";
 import { BotaoSecundario, BotaoPrincipal, InputFormulario, BordaInputs } from "../../../../../components";
 import { useHangleCadastro, useMostrarSenha } from "../../../../../hooks";
+import { InputesValidate } from "../../../../../utils/validations/inputs.validate";
 
 export const Form = () => {
 
-    const {nome, setNome, sobrenome, setSobrenome, login, setLogin, email, setEmail, senha, setSenha, telefone, setTelefone, endereco, setEndereco, cidade, setCidade, estado, setEstado, pais, setPais, handleCadastro, navigate} = useHangleCadastro()
+    const { nome, setNome, sobrenome, setSobrenome, login, setLogin, email, setEmail, senha, setSenha, telefone, setTelefone, endereco, setEndereco, cidade, setCidade, estado, setEstado, pais, setPais, handleCadastro, navigate } = useHangleCadastro()
 
     const forca = forcaDaSenha(senha)
 
@@ -26,6 +27,7 @@ export const Form = () => {
                         onChange={e => setNome(e.target.value)}
                         required
                     />
+                    {InputesValidate(nome, 3) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -39,6 +41,7 @@ export const Form = () => {
                         onChange={e => setSobrenome(e.target.value)}
                         required
                     />
+                    {InputesValidate(sobrenome, 5) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -52,6 +55,7 @@ export const Form = () => {
                         onChange={e => setLogin(e.target.value)}
                         required
                     />
+                    {InputesValidate(login, 3) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -65,6 +69,7 @@ export const Form = () => {
                         onChange={e => setEmail(e.target.value)}
                         required
                     />
+                    {InputesValidate(email, 7) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -80,6 +85,7 @@ export const Form = () => {
                         onChange={e => setSenha(e.target.value)}
                         required
                     />
+                    {InputesValidate(senha, 13) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <ForcaSenha>
@@ -99,6 +105,7 @@ export const Form = () => {
                         onChange={e => setTelefone(e.target.value)}
                         required
                     />
+                    {InputesValidate(telefone, 7) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -112,6 +119,7 @@ export const Form = () => {
                         onChange={e => setPais(e.target.value)}
                         required
                     />
+                    {InputesValidate(pais, 3) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -125,6 +133,7 @@ export const Form = () => {
                         onChange={e => setEstado(e.target.value)}
                         required
                     />
+                    {InputesValidate(estado, 3) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -138,6 +147,7 @@ export const Form = () => {
                         onChange={e => setCidade(e.target.value)}
                         required
                     />
+                    {InputesValidate(cidade, 3) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <InputContainer>
@@ -151,6 +161,7 @@ export const Form = () => {
                         onChange={e => setEndereco(e.target.value)}
                         required
                     />
+                    {InputesValidate(endereco, 5) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <CheckContainer>
