@@ -15,7 +15,7 @@ export const useHandleLogin = () => {
         const data = await loginService(login, senha, setUsuario)
         console.log(data)
 
-        if (data.usuario) navigate('/home')
+        if (data.usuario) navigate('/')
         else alert(data)
     }
 

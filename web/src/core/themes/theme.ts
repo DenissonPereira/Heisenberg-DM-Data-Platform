@@ -2,6 +2,8 @@ import bg_login_light from '../../assets/images/bg_login_light.png'
 import bg_login_dark from '../../assets/images/bg_login_dark.png'
 import bg_cadastro_light from '../../assets/images/bg_cadastro_light.png'
 import bg_cadastro_dark from '../../assets/images/bg_cadastro_dark.png'
+import bg_error_light from '../../assets/images/bg_error_light.png'
+import bg_error_dark from '../../assets/images/bg_error_dark.png'
 
 export const Light = {
   colors: {
@@ -22,6 +24,7 @@ export const Light = {
   images: {
     bg_login: bg_login_light,
     bg_cadastro: bg_cadastro_light,
+    bg_error: bg_error_light,
   },
 };
 
@@ -44,6 +47,7 @@ export const Dark = {
   images: {
     bg_login: bg_login_dark,
     bg_cadastro: bg_cadastro_dark,
+    bg_error: bg_error_dark,
   },
 };
 
