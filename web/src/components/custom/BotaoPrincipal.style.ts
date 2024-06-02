@@ -3,7 +3,7 @@ import { Center } from "../../core";
 
 export const BotaoPrincipal = styled.button`
     ${Center};
-    width: 20vw;
+    width: 19vw;
     height: 3vw;
     color: white;
     padding: .5em;

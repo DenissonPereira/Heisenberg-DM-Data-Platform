@@ -1,4 +1,4 @@
-import { SGBDSTORE_TOKEN, SGBDSTORE_USER } from "../core";
+import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from "../core";
 import { IUser } from "../models";
 import { serveConnection } from "./serveConnection";
 
@@ -12,8 +12,8 @@ export async function loginService(login: string, senha: string, setUsuario: (us
         if (!data.usuario) {
             return data?.usuario;
         } else {
-            await localStorage.setItem(SGBDSTORE_USER, JSON.stringify(data.usuario));
-            await localStorage.setItem(SGBDSTORE_TOKEN, data.token);
+            await localStorage.setItem(DMBDSTORE_USER, JSON.stringify(data.usuario));
+            await localStorage.setItem(DMBDSTORE_TOKEN, data.token);
             setUsuario(data.usuario);
             return data;
         }

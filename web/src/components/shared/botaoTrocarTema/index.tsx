@@ -43,7 +43,7 @@ export const BotaoTrocarTema = () => {
       <Container>
         <ToggleButton isDarkMode={isDarkMode} onClick={toggleTheme}>
           <ToggleCircle isDarkMode={isDarkMode}>
-            {isDarkMode ? <FaMoon color="#fff" /> : <FaSun color="#000" />}
+            {isDarkMode ? <FaMoon color="#bbd6d8" /> : <FaSun color="#a58f14" />}
           </ToggleCircle>
         </ToggleButton>
       </Container>

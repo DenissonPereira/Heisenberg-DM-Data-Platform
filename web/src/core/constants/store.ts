@@ -1,2 +1,2 @@
-export const SGBDSTORE_USER = '@HDMweb:userBG';
-export const SGBDSTORE_TOKEN = '@HDMweb:tokenBG';
+export const DMBDSTORE_USER = '@HDMweb:userBG';
+export const DMBDSTORE_TOKEN = '@HDMweb:tokenBG';

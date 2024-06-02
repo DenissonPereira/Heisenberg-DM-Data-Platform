@@ -23,9 +23,14 @@ export const TituloInput = styled.p`
 `;
 
 export const RememberContainer = styled.div`
+    padding: .5vw;
     display: flex;
     width: 25vw;
     justify-content: space-around;
+
+    p {
+        ${Marges};
+    }
 `;
 
 export const CheckBox = styled.div`
@@ -37,6 +42,7 @@ export const CheckBox = styled.div`
 export const EsqueceuSenha = styled.p`
     color: ${props => props.theme.colors.blueBackground};
     cursor: pointer;
+    ${Marges};
 `;
 
 export const LoaderContainer = styled.div`

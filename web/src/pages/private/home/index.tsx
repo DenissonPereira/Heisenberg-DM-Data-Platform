@@ -1,4 +1,4 @@
-import NavScrollComponent from "../../../components/layout/navScrollComponent"
+import { NavScrollComponent } from "../../../components"
 
 
 export const Home = () => {

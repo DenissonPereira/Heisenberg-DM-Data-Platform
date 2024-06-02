@@ -1,7 +1,7 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
 import { HeisenbergDM } from '../core/types';
 import { IUser } from '../models';
-import { SGBDSTORE_TOKEN, SGBDSTORE_USER } from '../core';
+import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from '../core';
 
 const HDMContext = createContext<HeisenbergDM>({} as HeisenbergDM);
 
@@ -14,10 +14,10 @@ export const HDMProvider: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     async function loadUsuario() {
-      const userData = await localStorage.getItem(SGBDSTORE_USER);
+      const userData = await localStorage.getItem(DMBDSTORE_USER);
       const user: IUser = userData ? JSON.parse(userData) : undefined;
 
-      const storedToken = await localStorage.getItem(SGBDSTORE_TOKEN);
+      const storedToken = await localStorage.getItem(DMBDSTORE_TOKEN);
 
       if (user?.id && storedToken) {
         setUsuario(user);

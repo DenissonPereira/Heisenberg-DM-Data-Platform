@@ -4,7 +4,7 @@ import { Center, Marges } from "../../../../../core";
 export const FormStyle = styled.form`
   ${Center};
   flex-direction: column;
-  gap: 0.2vw;
+  gap: 0.5vw;
 `;
 
 export const InputContainer = styled.div``;
@@ -55,6 +55,7 @@ export const CheckContainer = styled.div`
   justify-content: space-around;
 
   p {
+    ${Marges};
     font-size: 0.8em;
     text-align: justify;
   }

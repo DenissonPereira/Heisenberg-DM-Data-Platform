@@ -1,22 +1,22 @@
 import styled from "styled-components";
 import { Center } from "../../core";
 
-export const BotaoSecundario = styled.button`
+export const BotaoTerciario = styled.button`
     ${Center};
-    width: 19vw;
-    height: 3vw;
+    width: 80px;
+    height: 38px;
     color: white;
     padding: .5em;
     border-radius: 1vh;
-    background-color: ${props => props.theme.colors.pink};
-    border: none;
-    font-size: 1.2vw;
-    color: white;
+    border: 1px solid ${props => props.theme.colors.pink};
+    font-size: .9em;
+    color: ${props => props.theme.colors.pink};
     cursor: pointer;
 
     &:hover {
-        transition: .5s;
+        transition: .7s;
         background-color: ${props => props.theme.colors.pinkDark};
+        color: white;
     }
 
     &:active {
