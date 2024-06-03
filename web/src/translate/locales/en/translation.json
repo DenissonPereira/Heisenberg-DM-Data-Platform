@@ -4,6 +4,9 @@
     "Password": "Password",
     "Remember me": "Remember me",
     "Esqueceu a Senha?": "Forgot Password?",
-    "CADASTRAR": "REGISTER"
+    "CADASTRAR": "REGISTER",
+    "login": {
+      "titulo": "SIGN IN"
+    }
   }
   

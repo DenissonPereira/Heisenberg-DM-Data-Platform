@@ -20,6 +20,7 @@ export const Light = {
     GreenLight: '#D1FAF6',
     GreenDark: '#6CCFB9',
     cinza: '#A8A8A8',
+    lingua: '#F3F5F8',
   },
   images: {
     bg_login: bg_login_light,
@@ -43,6 +44,7 @@ export const Dark = {
     GreenLight: '#D1FAF6',
     GreenDark: '#6CCFB9',
     cinza: '#A8A8A8',
+    lingua: '#6CCFB9',
   },
   images: {
     bg_login: bg_login_dark,
