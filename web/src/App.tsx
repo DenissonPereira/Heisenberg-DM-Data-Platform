@@ -3,7 +3,7 @@ import { HDMProvider } from "./contexts/HDMContext"
 import { RoutesApp } from "./routes"
 import { ThemeProvider } from "./contexts/themeContext"
 import { GlobalStyle } from "./core"
-
+import '../src/translate/index'
 
 export function App() {
 

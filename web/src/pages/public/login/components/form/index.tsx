@@ -3,8 +3,10 @@ import { useMostrarSenha, useHandleLogin } from "../../../../../hooks";
 import { BotaoPrincipal, BotaoSecundario, BordaInputs, InputFormulario, Loading } from "../../../../../components";
 import { FcBusinessman, FcLock, FcUnlock } from "react-icons/fc";
 import { CheckBox, EsqueceuSenha, FormStyle, InputContainer, RememberContainer, Senha, TituloInput } from "./styles";
+import { useTranslation } from "react-i18next";
 
 export const Form = () => {
+  const { t } = useTranslation()
   const { verSenha, mostrarSenha } = useMostrarSenha();
   const { login, setLogin, senha, setSenha, handleLogin, navigate, loading } = useHandleLogin();
 
@@ -92,7 +94,7 @@ export const Form = () => {
         </CheckBox>
         <EsqueceuSenha>Esqueceu a Senha?</EsqueceuSenha>
       </RememberContainer>
-      <BotaoPrincipal type="submit">ENTRAR</BotaoPrincipal>
+      <BotaoPrincipal type="submit">{t("name")}</BotaoPrincipal>
       <BotaoSecundario onClick={() => navigate("/cadastro")} type="button">
         CADASTRAR
       </BotaoSecundario>
