@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const BASE_URL = 'http://127.0.0.1:8080';
+import { BASE_URL } from '../config';
 
 export const serveConnection = axios.create({
     baseURL: BASE_URL
