@@ -1,10 +1,9 @@
 import { FcBusinessman, FcAddressBook, FcConferenceCall, FcReading, FcUnlock, FcPhone, FcDepartment, FcLock, FcCheckmark } from "react-icons/fc";
 import { CheckBox, CheckContainer, ForcaSenha, FormStyle, Forte, Fraca, InputContainer, Media, Senha, Vazia } from "./styles"
 import { FaMapLocationDot } from "react-icons/fa6";
-import { forcaDaSenha } from "../../../../../utils/helpers/forcaDaSenha";
 import { BotaoSecundario, BotaoPrincipal, InputFormulario, BordaInputs } from "../../../../../components";
 import { useHangleCadastro, useMostrarSenha } from "../../../../../hooks";
-import { InputesValidate } from "../../../../../utils/validations/inputs.validate";
+import { InputesValidate, forcaDaSenha, getCorForca } from "../../../../../utils";
 
 export const Form = () => {
 
@@ -83,6 +82,7 @@ export const Form = () => {
                         placeholder='Senha'
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
+                        style={{ color: getCorForca(forca)}}
                         required
                     />
                     {InputesValidate(senha, 13) && <FcCheckmark />}
