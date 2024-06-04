@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import { ThemeProvider } from '../contexts/themeContext';
-import { Login } from '../pages';
+import { ThemeProvider } from '../../../contexts/themeContext';
+import { Login } from '../..';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('Login Component', () => {
