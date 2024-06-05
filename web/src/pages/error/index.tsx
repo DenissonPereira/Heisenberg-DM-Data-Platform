@@ -2,6 +2,6 @@ import { ErrorContainer } from "./styles"
 
 export const Error = () => {
   return (
-    <ErrorContainer></ErrorContainer>
+    <ErrorContainer data-testid='erro_page'></ErrorContainer>
   )
 }
