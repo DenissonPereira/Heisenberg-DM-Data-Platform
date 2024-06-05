@@ -22,6 +22,7 @@ export const Form = () => {
                         type='text'
                         id='nome_id'
                         placeholder='Nome'
+                        data-testid='nome_input'
                         value={nome}
                         onChange={e => setNome(e.target.value)}
                         required
