@@ -1,9 +1,11 @@
+import { Tamanho } from "../.."
+
 export const forcaDaSenha = (senha: string) => {
     const tamanho = senha.length
 
-    if (tamanho > 12) return 'forte'
-    if (tamanho >= 7) return 'media'
-    if (tamanho > 4) return 'fraca'
+    if (tamanho > Tamanho.Forte) return 'forte'
+    if (tamanho >= Tamanho.media) return 'media'
+    if (tamanho > Tamanho.Fraca) return 'fraca'
 
     return 'vazia'
 }

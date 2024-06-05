@@ -1,6 +1,6 @@
 import { Container } from "./styles"
 import { HDMProvider } from "./contexts/HDMContext"
-import { RoutesApp } from "./routes"
+import { RoutesApp } from "./routes/routes"
 import { ThemeProvider } from "./contexts/themeContext"
 import { GlobalStyle } from "./core"
 import '../src/translate/index'

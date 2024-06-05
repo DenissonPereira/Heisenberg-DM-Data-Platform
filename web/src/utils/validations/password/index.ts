@@ -1,12 +1,14 @@
+import { Password } from "../../enums";
+
 export const getCorForca = (forca: string) => {
     switch (forca) {
-        case 'vazia':
+        case Password.Vazia:
             return 'grey';
-        case 'fraca':
+        case Password.Fraca:
             return 'red';
-        case 'media':
+        case Password.Media:
             return 'orange';
-        case 'forte':
+        case Password.Forte:
             return 'green';
         default:
             return 'grey';

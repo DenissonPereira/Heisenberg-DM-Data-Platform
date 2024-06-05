@@ -1,7 +1,7 @@
 import { useGlobalHDMContext } from "../contexts/HDMContext"
 import { BrowserRouter } from 'react-router-dom'
-import { IsUser } from './IsUser'
-import { NotUser } from './NotUser'
+import { IsUser } from './isUser.routes'
+import { NotUser } from './notUser.routes'
 
 export const RoutesApp = () => {
 
