@@ -37,6 +37,7 @@ export const Form = () => {
                         type='text'
                         id='sobrenome_id'
                         placeholder='Sobrenome'
+                        data-testid='sobrenome_input'
                         value={sobrenome}
                         onChange={e => setSobrenome(e.target.value)}
                         required
@@ -51,6 +52,7 @@ export const Form = () => {
                         type='text'
                         id='login_id'
                         placeholder='Login'
+                        data-testid='login_input'
                         value={login}
                         onChange={e => setLogin(e.target.value)}
                         required
@@ -65,6 +67,7 @@ export const Form = () => {
                         type='email'
                         id='email_id'
                         placeholder='E-mail'
+                        data-testid='email_input'
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         required
@@ -81,6 +84,7 @@ export const Form = () => {
                         type={verSenha ? 'text' : 'password'}
                         id='senha_id'
                         placeholder='Senha'
+                        data-testid='senha_input'
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
                         style={{ color: getCorForca(forca)}}
@@ -102,6 +106,7 @@ export const Form = () => {
                         type='text'
                         id='telefone_id'
                         placeholder='Telefone'
+                        data-testid='telefone_input'
                         value={telefone}
                         onChange={e => setTelefone(e.target.value)}
                         required
@@ -116,6 +121,7 @@ export const Form = () => {
                         type='text'
                         id='pais_id'
                         placeholder='País'
+                        data-testid='pais_input'
                         value={pais}
                         onChange={e => setPais(e.target.value)}
                         required
@@ -130,6 +136,7 @@ export const Form = () => {
                         type='text'
                         id='estado_id'
                         placeholder='Estado'
+                        data-testid='estado_input'
                         value={estado}
                         onChange={e => setEstado(e.target.value)}
                         required
@@ -144,6 +151,7 @@ export const Form = () => {
                         type='text'
                         id='cidade_id'
                         placeholder='Cidade'
+                        data-testid='cidade_input'
                         value={cidade}
                         onChange={e => setCidade(e.target.value)}
                         required
@@ -158,6 +166,7 @@ export const Form = () => {
                         type='text'
                         id='endereco_id'
                         placeholder='Endereço'
+                        data-testid='endereco_input'
                         value={endereco}
                         onChange={e => setEndereco(e.target.value)}
                         required

@@ -5,7 +5,7 @@ import { Error } from ".";
 import { ThemeProvider } from "../../contexts/themeContext";
 
 describe('Erro page', () => {
-    it('should render the Erro page correctly', () => {
+    it('should render the Error page correctly', () => {
         render(
             <ThemeProvider>
                 <BrowserRouter>
