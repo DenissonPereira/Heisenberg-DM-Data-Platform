@@ -1,2 +1,2 @@
-export * from './inputs.validate'
+export * from './inputs'
 export * from './password.validate'
