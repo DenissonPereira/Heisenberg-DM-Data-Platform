@@ -7,6 +7,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import { useGlobalHDMContext } from '../../../contexts/HDMContext';
 import { BotaoTerciario, BotaoTrocarTema } from '../..';
 import { logoutService } from '../../../services/logoutService';
+import Logo from '../../../assets/images/logo_nome_incompleto.png'
 
 export function NavScrollComponent() {
 
@@ -21,7 +22,7 @@ export function NavScrollComponent() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home"><img style={{ width: 90 }} src={Logo} alt="Logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

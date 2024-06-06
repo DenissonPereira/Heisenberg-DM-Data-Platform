@@ -1,10 +1,13 @@
 import { NavScrollComponent } from "../../../components"
+import { Central } from "./components"
+import { HomeBackground } from "./styles"
 
 
 export const Home = () => {
   return (
-    <div>
+    <HomeBackground>
       <NavScrollComponent />
-    </div>
+      <Central />
+    </HomeBackground>
   )
 }

@@ -1,6 +1,7 @@
-import { BotaoTrocarTema } from "../../../../../components"
+import { BotaoTrocarTema, TrocarLinguagem } from "../../../../../components"
 import { useTranslation } from "react-i18next";
-import { TituloContainer, TituloText } from "./styles"
+import { Botoes, TituloContainer, TituloText } from "./styles"
+import Logo from '../../../../../assets/images/logo_nome.png'
 
 export const Cabecario = () => {
 
@@ -8,8 +9,11 @@ export const Cabecario = () => {
 
   return (
     <TituloContainer>
-        <TituloText data-testid="titulo_cabecario">{t("login.titulo")}<span>.</span></TituloText>
+      <img src={Logo} alt="Logo" />
+      <Botoes>
         <BotaoTrocarTema />
+        <TrocarLinguagem />
+      </Botoes>
     </TituloContainer>
   )
 }

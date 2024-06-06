@@ -1,4 +1,3 @@
-import { TrocarLinguagem } from "../../../components";
 import { Cabecario, Form } from "./components"
 import { Direitos, Left, LoginContainer, Right, Suporte, SuporteContainer } from "./styles"
 import { FcPhone, FcInvite } from "react-icons/fc";
@@ -8,7 +7,6 @@ export const Login = () => {
     <LoginContainer>
       <Left></Left>
       <Right>
-        <TrocarLinguagem />
         <Cabecario />
         <Form />
         <Suporte>

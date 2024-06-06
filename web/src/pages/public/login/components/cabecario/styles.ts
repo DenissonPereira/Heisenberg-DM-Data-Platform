@@ -6,6 +6,12 @@ export const TituloContainer = styled.div`
     flex-direction: column;
     margin-bottom: 3vw;
     margin-top: 3vw;
+    gap: 1vw;
+
+    img {
+        width: 15vw;
+        -webkit-user-drag: none;
+    }
 `;
 
 export const TituloText = styled.p`
@@ -17,4 +23,9 @@ export const TituloText = styled.p`
         color: ${props => props.theme.colors.Green};
         font-size: 4vw;
     }
+`;
+
+export const Botoes = styled.div`
+    ${Center};
+    gap: .5vw;
 `;

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export const SelectContainer = styled.div``;
 
 export const Select = styled.select`
-  width: 100px;
-  height: 40px;
+  width: 70px;
+  height: 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px;
