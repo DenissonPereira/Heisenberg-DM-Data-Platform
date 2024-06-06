@@ -24,6 +24,7 @@ export const Light = {
     cinza: '#A8A8A8',
     lingua: '#F3F5F8',
     orange: '#F5BF67',
+    texto: 'black',
   },
   images: {
     bg_login: bg_login_light,
@@ -50,6 +51,7 @@ export const Dark = {
     cinza: '#A8A8A8',
     lingua: '#6CCFB9',
     orange: '#EF9737',
+    texto: '#EF9737',
   },
   images: {
     bg_login: bg_login_dark,

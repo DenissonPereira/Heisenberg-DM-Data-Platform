@@ -90,7 +90,7 @@ export const Form = () => {
                         style={{ color: getCorForca(forca)}}
                         required
                     />
-                    {InputesValidate(senha, 13) && <FcCheckmark />}
+                    {InputesValidate(senha, 11) && <FcCheckmark />}
                 </BordaInputs>
             </InputContainer>
             <ForcaSenha>

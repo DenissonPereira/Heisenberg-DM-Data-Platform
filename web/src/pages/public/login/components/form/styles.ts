@@ -40,7 +40,7 @@ export const CheckBox = styled.div`
 `;
 
 export const EsqueceuSenha = styled.p`
-    color: ${props => props.theme.colors.blueBackground};
+    color: ${props => props.theme.colors.orange};
     cursor: pointer;
     ${Marges};
 `;
