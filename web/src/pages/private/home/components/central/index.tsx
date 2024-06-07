@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
 import { Botoes, CentralContainer, DescrisaoCurta, DescrisaoMaior, Titulo } from './styles';
 import { UseMaquinaDeEscrever } from '../../../../../hooks/useMaquinaDeEscrever';
 import { BotaoPrincipal, BotaoSecundario, BotaoTerciario } from '../../../../../components';
+import { useGlobalHDMContext } from '../../../../../contexts/HDMContext';
 
 export const Central: React.FC = () => {
 
     const titulo = UseMaquinaDeEscrever('Heisenberg DM Data Platform', 100)
+
+    const { magnetizacao } = useGlobalHDMContext()
 
     return (
         <CentralContainer>
@@ -21,6 +23,9 @@ export const Central: React.FC = () => {
                 <BotaoPrincipal style={{ width: 150 }}>Get Started</BotaoPrincipal>
                 <BotaoSecundario style={{ width: 150 }}>Learn HDM</BotaoSecundario>
             </Botoes>
+            {magnetizacao.map((item) => (
+                <div key={item.id}>{item.temperatura}{item.magnetizacao}</div>
+            ))}
         </CentralContainer>
     );
 };

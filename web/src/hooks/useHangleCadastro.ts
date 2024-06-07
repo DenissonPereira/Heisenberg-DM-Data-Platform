@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { cadastroService } from "../services/cadastroService";
+import { cadastroService } from "../services/user/cadastroService";
 import { useNavigate } from "react-router";
 
 export const useHangleCadastro = () => {

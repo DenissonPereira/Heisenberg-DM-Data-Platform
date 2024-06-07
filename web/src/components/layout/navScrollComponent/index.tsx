@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import { useGlobalHDMContext } from '../../../contexts/HDMContext';
 import { BotaoTerciario, BotaoTrocarTema } from '../..';
-import { logoutService } from '../../../services/logoutService';
+import { logoutService } from '../../../services/user/logoutService';
 import Logo from '../../../assets/images/logo_nome_incompleto.png'
 import { Center } from '../../../core';
 

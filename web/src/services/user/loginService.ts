@@ -1,6 +1,6 @@
-import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from "../core";
-import { IUser } from "../models";
-import { serveConnection } from "./serveConnection";
+import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from "../../core";
+import { IUser } from "../../models";
+import { serveConnection } from "../connection/serveConnection";
 
 export async function loginService(login: string, senha: string, setUsuario: (usuario: IUser) => void) {
     try {

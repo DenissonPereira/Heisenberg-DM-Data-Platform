@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { loginService } from "../services/loginService";
+import { loginService } from "../services";
 import { useGlobalHDMContext } from "../contexts/HDMContext";
 import { useState } from "react";
 

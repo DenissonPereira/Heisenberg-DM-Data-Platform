@@ -1,6 +1,6 @@
 import { isAxiosError } from "axios";
-import { serveConnection } from "./serveConnection";
-import { ICadastro } from "../models";
+import { serveConnection } from "../connection/serveConnection";
+import { ICadastro } from "../../models";
 
 
 export async function cadastroService(usuario: ICadastro): Promise<void> {

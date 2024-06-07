@@ -1,7 +1,8 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
 import { HeisenbergDM } from '../core/types';
-import { IUser } from '../models';
+import { IMagnetization, IUser } from '../models';
 import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from '../core';
+import { magnetizationLoadService } from '../services/others';
 
 const HDMContext = createContext<HeisenbergDM>({} as HeisenbergDM);
 
@@ -11,6 +12,7 @@ type Props = {
 export const HDMProvider: React.FC<Props> = ({ children }) => {
   const [usuario, setUsuario] = useState<IUser>({} as IUser);
   const [token, setToken] = useState<string>('');
+  const [magnetizacao, setMagnetizacao] = useState<IMagnetization[]>([]);
 
   useEffect(() => {
     async function loadUsuario() {
@@ -25,6 +27,7 @@ export const HDMProvider: React.FC<Props> = ({ children }) => {
       }
     }
     loadUsuario();
+    magnetizationLoadService(setMagnetizacao)
   }, []);
 
   return (
@@ -32,6 +35,8 @@ export const HDMProvider: React.FC<Props> = ({ children }) => {
       value={{
         usuario,
         token,
+        magnetizacao,
+        setMagnetizacao,
         setUsuario,
         setToken,
       }}

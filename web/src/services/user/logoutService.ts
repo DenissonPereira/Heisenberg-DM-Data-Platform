@@ -1,4 +1,4 @@
-import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from "../core"
+import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from "../../core"
 
 export async function logoutService() {
     try {
