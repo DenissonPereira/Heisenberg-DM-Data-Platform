@@ -10,6 +10,7 @@ import { BotaoTerciario, BotaoTrocarTema } from '../..';
 import { logoutService } from '../../../services/user/logoutService';
 import Logo from '../../../assets/images/logo_nome_incompleto.png'
 import { Center } from '../../../core';
+import { Link } from 'react-router-dom';
 
 // Estilize o Navbar usando styled-components
 const StyledNavbar = styled(Navbar)`
@@ -36,11 +37,11 @@ export function NavScrollComponent() {
   return (
     <StyledNavbar collapseOnSelect expand="lg">
       <Container>
-        <Navbar.Brand href="#home"><img style={{ width: 90 }} src={Logo} alt="Logo" /></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><img style={{ width: 90 }} src={Logo} alt="Logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link as={Link} to="/dados">Dados</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
             <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

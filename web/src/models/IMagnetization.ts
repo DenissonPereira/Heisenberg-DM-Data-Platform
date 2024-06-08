@@ -1,5 +1,5 @@
 export interface IMagnetization {
     id: number
-    temperatura: string
-    magnetizacao: string
+    temperatura: number
+    magnetizacao: number
 }
