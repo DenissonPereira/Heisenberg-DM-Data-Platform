@@ -6,6 +6,9 @@ export type HeisenbergDM = {
     setUsuario: (usuario: IUsuario) => void;
     setToken: (token: string) => void;
     dados: IDados[];
-    setDados: (dados: IDados[]) => void
-    PegarDados: (nomeTabela: string) => Promise<IDados[]>
+    id: IDados | null;
+    setId: (id: IDados) => void;
+    setDados: (dados: IDados[]) => void;
+    PegarDados: (nomeTabela: string) => Promise<IDados[]>;
+    PegarDadosPorId: (nomeTabela: string, id: number) => Promise<IDados>;
 };
