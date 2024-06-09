@@ -1,10 +1,11 @@
-import { IMagnetization, IUser } from "../../models";
+import { IDados, IMagnetization, IUser } from "../../models";
 
 export type HeisenbergDM = {
     usuario: IUser;
     token: string;
     setUsuario: (usuario: IUsuario) => void;
     setToken: (token: string) => void;
-    magnetizacao: IMagnetization[];
-    setMagnetizacao(magnetizacao: IMagnetization[]): void;
+    dados: IDados[];
+    setDados: (dados: IDados[]) => void
+    PegarDados: (nomeTabela: string) => Promise<IDados[]>
 };

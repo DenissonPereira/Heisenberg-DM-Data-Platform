@@ -1,3 +1,3 @@
 export * from './IUser'
 export * from './ICadastro'
-export * from './IMagnetization'
+export * from './IDados'

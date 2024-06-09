@@ -4,6 +4,7 @@ import { HomeBackground } from "./styles"
 
 
 export const Home = () => {
+
   return (
     <HomeBackground>
       <NavScrollComponent />

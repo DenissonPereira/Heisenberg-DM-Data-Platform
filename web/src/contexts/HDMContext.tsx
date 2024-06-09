@@ -1,8 +1,8 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
 import { HeisenbergDM } from '../core/types';
-import { IMagnetization, IUser } from '../models';
+import { IDados, IUser } from '../models';
 import { DMBDSTORE_TOKEN, DMBDSTORE_USER } from '../core';
-import { magnetizationLoadService } from '../services/others';
+import { DadosService } from '../services/others';
 
 const HDMContext = createContext<HeisenbergDM>({} as HeisenbergDM);
 
@@ -12,7 +12,7 @@ type Props = {
 export const HDMProvider: React.FC<Props> = ({ children }) => {
   const [usuario, setUsuario] = useState<IUser>({} as IUser);
   const [token, setToken] = useState<string>('');
-  const [magnetizacao, setMagnetizacao] = useState<IMagnetization[]>([]);
+  const [dados, setDados] = useState<IDados[]>([])
 
   useEffect(() => {
     async function loadUsuario() {
@@ -27,16 +27,22 @@ export const HDMProvider: React.FC<Props> = ({ children }) => {
       }
     }
     loadUsuario();
-    magnetizationLoadService(setMagnetizacao)
   }, []);
+
+  const PegarDados = async (nomeTabela: string): Promise<IDados[]> => {
+    const result = await DadosService(nomeTabela)
+    setDados(result)
+    return result
+  }
 
   return (
     <HDMContext.Provider
       value={{
         usuario,
         token,
-        magnetizacao,
-        setMagnetizacao,
+        dados,
+        setDados,
+        PegarDados,
         setUsuario,
         setToken,
       }}
