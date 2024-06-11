@@ -41,6 +41,7 @@ export function NavScrollComponent() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+            <Nav.Link as={Link} to="/graficos">Gráficos</Nav.Link>
             <Nav.Link as={Link} to="/dados">Dados</Nav.Link>
             <Nav.Link as={Link} to="/docs">Docs</Nav.Link>
             <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
