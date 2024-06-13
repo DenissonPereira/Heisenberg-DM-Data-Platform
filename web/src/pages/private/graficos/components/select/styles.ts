@@ -54,3 +54,14 @@ export const GraficoStyleSozinho = styled.div`
     ${Center};
     width: 50vw;
 `;
+
+export const ContainerBotoes = styled.div`
+    ${Center};
+    gap: .5vw;
+
+    button {
+        width: 9vw;
+        height: 3vh;
+        font-size: 1em;
+    }
+`;

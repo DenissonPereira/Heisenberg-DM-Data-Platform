@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { BotoesStyle, CoresStyle, DadosStyle, GraficoStyle, GraficoStyleSozinho, SelectContainer, SelectStyle } from "./styles";
+import { BotoesStyle, ContainerBotoes, CoresStyle, DadosStyle, GraficoStyle, GraficoStyleSozinho, SelectContainer, SelectStyle } from "./styles";
 import { useGlobalHDMContext } from "../../../../../contexts/HDMContext";
 import { Anisotrpia, exportarDados, exportarGrafico } from "../../../../../utils";
 import { VictoryAxis, VictoryChart, VictoryLabel, VictoryLegend, VictoryScatter } from "victory";
 import { PiMagnifyingGlassPlus, PiMagnifyingGlassMinus, PiDownloadFill } from "react-icons/pi";
 import { MdFilterCenterFocus } from "react-icons/md";
+import { BotaoPrincipal, BotaoSecundario } from "../../../../../components";
 
 export const Select = () => {
     const selectGrandezas = useRef<HTMLSelectElement>(null);
@@ -96,22 +97,24 @@ export const Select = () => {
     return (
         <SelectContainer>
             <DadosStyle>
-                <SelectStyle name="select_grandezas" ref={selectGrandezas}>
-                    <option value="magnetizacao">Magnetização</option>
-                    <option value="energia">Energia</option>
-                    <option value="suscetibilidade">Suscetibilidade</option>
-                    <option value="inverso">Inverso suscetibilidade</option>
-                </SelectStyle>
-                <SelectStyle name="select_anisotropia" ref={selectAnisotropia}>
-                    <option value="0">0</option>
-                    <option value="0.8">0.8</option>
-                    <option value="1.0">1.0</option>
-                    <option value="2.0">2.0</option>
-                    <option value="3.0">3.0</option>
-                    <option value="3.38">3.38</option>
-                </SelectStyle>
-                <button onClick={plotar}>Plotar Gráfico</button>
-                <button onClick={() => exportarDados('kT/J', grandeza, data, anisotropia)}>Exportar Dados</button>
+                <ContainerBotoes>
+                    <SelectStyle name="select_grandezas" ref={selectGrandezas}>
+                        <option value="magnetizacao">Magnetização</option>
+                        <option value="energia">Energia</option>
+                        <option value="suscetibilidade">Suscetibilidade</option>
+                        <option value="inverso">Inverso suscetibilidade</option>
+                    </SelectStyle>
+                    <SelectStyle name="select_anisotropia" ref={selectAnisotropia}>
+                        <option value="0">0</option>
+                        <option value="0.8">0.8</option>
+                        <option value="1.0">1.0</option>
+                        <option value="2.0">2.0</option>
+                        <option value="3.0">3.0</option>
+                        <option value="3.38">3.38</option>
+                    </SelectStyle>
+                    <BotaoPrincipal onClick={plotar}>Plotar Gráfico</BotaoPrincipal>
+                    <BotaoSecundario onClick={() => exportarDados('kT/J', grandeza, data, anisotropia)}>Exportar Dados</BotaoSecundario>
+                </ContainerBotoes>
                 <CoresStyle>
                     <h3>Cor:</h3>
                     <input type="color" name="" id="" value={cor} onChange={(e) => setCor(e.target.value)} />
@@ -153,10 +156,10 @@ export const Select = () => {
                     </VictoryChart>
                 </GraficoStyleSozinho>
                 <BotoesStyle>
-                    <div onClick={plus}><PiMagnifyingGlassPlus /></div>
-                    <div onClick={less}><PiMagnifyingGlassMinus /></div>
-                    <div onClick={centering}><MdFilterCenterFocus /></div>
-                    <div onClick={() => exportarGrafico(grandeza, anisotropia, graficoRef.current)}><PiDownloadFill /></div>
+                    <div onClick={plus} title="Ampliar"><PiMagnifyingGlassPlus /></div>
+                    <div onClick={less} title="Diminuir"><PiMagnifyingGlassMinus /></div>
+                    <div onClick={centering} title="Centralizar"><MdFilterCenterFocus /></div>
+                    <div onClick={() => exportarGrafico(grandeza, anisotropia, graficoRef.current)} title="Download"><PiDownloadFill /></div>
                 </BotoesStyle>
             </GraficoStyle>
         </SelectContainer>
