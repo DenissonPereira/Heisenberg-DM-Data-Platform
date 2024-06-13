@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const GraficosContainer = styled.div`
+export const SobreStyles = styled.div`
     background-image: url(${props => props.theme.images.bg_limpa});
     background-repeat: no-repeat;
     background-size: cover;

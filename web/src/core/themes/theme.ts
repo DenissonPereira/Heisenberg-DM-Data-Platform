@@ -6,6 +6,8 @@ import bg_error_light from '../../assets/images/bg_error_light.png'
 import bg_error_dark from '../../assets/images/bg_error_dark.png'
 import bg_home_light from '../../assets/images/bg_home_light.png'
 import bg_home_dark from '../../assets/images/bg_home_dark.png'
+import bg_limpa_light from '../../assets/images/bg_limpa_light.png'
+import bg_limpa_dark from '../../assets/images/bg_limpa_dark.png'
 
 export const Light = {
   colors: {
@@ -31,6 +33,7 @@ export const Light = {
     bg_cadastro: bg_cadastro_light,
     bg_error: bg_error_light,
     bg_home: bg_home_light,
+    bg_limpa: bg_limpa_light,
   },
 };
 
@@ -58,6 +61,7 @@ export const Dark = {
     bg_cadastro: bg_cadastro_dark,
     bg_error: bg_error_dark,
     bg_home: bg_home_dark,
+    bg_limpa: bg_limpa_dark,
   },
 };
 
