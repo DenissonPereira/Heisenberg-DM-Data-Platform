@@ -49,3 +49,8 @@ export const BotoesStyle = styled.div`
         color: ${props => props.theme.colors.texto}
     }
 `;
+
+export const GraficoStyleSozinho = styled.div`
+    ${Center};
+    width: 50vw;
+`;

@@ -1,5 +1,3 @@
-
-
 export const exportarDados = (nomeX: string, nomeY: string, data: { x: number; y: number }[], anisotropia: string) => {
     const csvRows = []
     csvRows.push(`${nomeX}, ${nomeY}`)
