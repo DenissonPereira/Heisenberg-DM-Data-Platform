@@ -6,7 +6,6 @@ import { VictoryAxis, VictoryChart, VictoryLabel, VictoryLegend, VictoryScatter 
 import { PiMagnifyingGlassPlus, PiMagnifyingGlassMinus } from "react-icons/pi";
 import { MdFilterCenterFocus } from "react-icons/md";
 
-
 export const Select = () => {
     const selectGrandezas = useRef<HTMLSelectElement>(null);
     const selectAnisotropia = useRef<HTMLSelectElement>(null);
@@ -39,7 +38,6 @@ export const Select = () => {
         };
         verDados();
     }, [anisotropia, PegarDados, setDados]);
-
 
     useEffect(() => {
         if (grandeza === 'magnetizacao') {
@@ -94,6 +92,25 @@ export const Select = () => {
         setValorYY(0)
     }
 
+    const exportCSV = () => {
+        const csvRows = [];
+        csvRows.push(`$kT/J, ${grandeza}`);
+        data.forEach(row => {
+            csvRows.push(`${row.x},${row.y}`);
+        });
+
+        const csvString = csvRows.join("\n");
+        const blob = new Blob([csvString], { type: "text/csv" });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.setAttribute("hidden", "");
+        a.setAttribute("href", url);
+        a.setAttribute("download", `dados_${grandeza}_anisotropia_${anisotropia}.csv`);
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
+
     return (
         <SelectContainer>
             <DadosStyle>
@@ -112,6 +129,7 @@ export const Select = () => {
                     <option value="3.38">3.38</option>
                 </SelectStyle>
                 <button onClick={plotar}>Plotar Gráfico</button>
+                <button onClick={exportCSV}>Exportar Dados</button>
                 <CoresStyle>
                     <h3>Cor:</h3>
                     <input type="color" name="" id="" value={cor} onChange={(e) => setCor(e.target.value)} />
