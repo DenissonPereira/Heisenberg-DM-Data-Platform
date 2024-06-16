@@ -11,15 +11,15 @@ export async function loginService(login: string, senha: string, setUsuario: (us
         });
 
         if (!data.usuario) {
-            return data?.usuario;
+            return { status: false, msg: 'Usuário não encontrado.' };
         } else {
             await AsyncStorage.setItem(DMBDSTORE_USER, JSON.stringify(data.usuario));
             await AsyncStorage.setItem(DMBDSTORE_TOKEN, data.token);
             setUsuario(data.usuario);
-            return data;
+            return { status: true, usuario: data.usuario };
         }
     } catch (erro) {
         console.log(erro);
-        return;
+        return { status: false, msg: 'Erro ao conectar com o servidor.' };
     }
 }
