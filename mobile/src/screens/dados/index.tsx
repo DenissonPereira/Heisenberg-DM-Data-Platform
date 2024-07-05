@@ -2,10 +2,10 @@ import React from 'react';
 import { Text } from 'react-native';
 import { styles } from './styles';
 
-export const Graficos = () => {
+export const Dados = () => {
   return (
     <Text style={styles.Texto}>
-      graficos
+      dados
     </Text>
   );
 }

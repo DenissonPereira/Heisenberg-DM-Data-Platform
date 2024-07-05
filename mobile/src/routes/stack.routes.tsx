@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack"
 
-import { Docs, Graficos, Home, Login, Perfil, Sobre } from "../screens";
+import { Dados, Docs, Home, Login, Perfil, Sobre } from "../screens";
 
 const Stack = createStackNavigator();
 
@@ -28,10 +28,10 @@ export default function StackRoutes() {
 
             <Stack.Screen
                 name="2"
-                component={Graficos}
+                component={Dados}
                 options={{
                     headerShown: true,
-                    headerTitle: 'Gráficos'
+                    headerTitle: 'Dados'
                 }}
             />
 

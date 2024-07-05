@@ -1,5 +1,5 @@
 export * from './docs'
-export * from './graficos'
+export * from './dados'
 export * from './home'
 export * from './login'
 export * from './perfil'

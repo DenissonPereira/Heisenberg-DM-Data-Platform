@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import StackRoutes from './stack.routes';
 import { Feather, MaterialIcons, Entypo, MaterialCommunityIcons } from '@expo/vector-icons'
 import { View } from 'react-native';
-import { Docs, Graficos, Home, Sobre } from '../screens';
+import { Dados, Docs, Home, Sobre } from '../screens';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,7 +17,7 @@ export const TabRoutes = () => {
                     justifyContent: 'center',
                     height: 100,
                 },
-                tabBarActiveTintColor: 'red',
+                tabBarActiveTintColor: '#6546DC',
             }}
         >
             <Tab.Screen
@@ -38,11 +38,11 @@ export const TabRoutes = () => {
             
             <Tab.Screen 
                 name='categoriasTab'
-                component={Docs}
+                component={Dados}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <View style={{
-                            backgroundColor: 'red',
+                            backgroundColor: '#6546DC',
                             borderRadius: 50,
                             padding: 10,
                             overflow: 'hidden'
@@ -55,7 +55,7 @@ export const TabRoutes = () => {
 
             <Tab.Screen 
                 name='marcasTab'
-                component={Graficos}
+                component={Docs}
                 options={{
                     tabBarIcon: ({ color, size }) => <MaterialIcons name='directions-car' color={color} size={size} />
                 }}
