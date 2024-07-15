@@ -41,9 +41,9 @@ export const Dados = () => {
                         items={[
                             { label: 'Anisotropia = 0', value: '0' },
                             { label: 'Anisotropia = 0.8', value: '0.8' },
-                            { label: 'Anisotropia = 1.0', value: '1.0' },
-                            { label: 'Anisotropia = 2.0', value: '2.0' },
-                            { label: 'Anisotropia = 3.0', value: '3.0' },
+                            { label: 'Anisotropia = 1.0', value: '1' },
+                            { label: 'Anisotropia = 2.0', value: '2' },
+                            { label: 'Anisotropia = 3.0', value: '3' },
                             { label: 'Anisotropia = 3.38', value: '3.38' }
                         ]}
                         style={pickerSelectStyles}

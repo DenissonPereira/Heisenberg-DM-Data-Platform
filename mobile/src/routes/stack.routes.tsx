@@ -58,7 +58,6 @@ export default function StackRoutes() {
                 component={Login}
                 options={{
                     headerShown: true,
-                    headerTitle: 'Toyota RAV4'
                 }}
             />
         </Stack.Navigator>

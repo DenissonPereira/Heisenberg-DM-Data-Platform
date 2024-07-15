@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import StackRoutes from './stack.routes';
-import { Feather, MaterialIcons, Entypo, MaterialCommunityIcons } from '@expo/vector-icons'
+import { Feather, MaterialIcons, Entypo, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons'
 import { View } from 'react-native';
-import { Dados, Docs, Home, Sobre } from '../screens';
+import { Dados, Docs, Home, Perfil, Sobre } from '../screens';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,9 +15,9 @@ export const TabRoutes = () => {
                 tabBarStyle: {
                     alignItems: 'center',
                     justifyContent: 'center',
-                    height: 100,
+                    height:100,
                 },
-                tabBarActiveTintColor: '#6546DC',
+                tabBarActiveTintColor: '#596FDC',
             }}
         >
             <Tab.Screen
@@ -29,20 +29,20 @@ export const TabRoutes = () => {
             />
 
             <Tab.Screen 
-                name='servicosTab'
-                component={Home}
+                name='sobreTab'
+                component={Sobre}
                 options={{
-                    tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name='shield-car' color={color} size={size} />
+                    tabBarIcon: ({ color, size }) => <Entypo name='magnet' color={color} size={size} />
                 }}
             />
             
             <Tab.Screen 
-                name='categoriasTab'
+                name='dadosTab'
                 component={Dados}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <View style={{
-                            backgroundColor: '#6546DC',
+                            backgroundColor: '#596FDC',
                             borderRadius: 50,
                             padding: 10,
                             overflow: 'hidden'
@@ -54,18 +54,18 @@ export const TabRoutes = () => {
             />
 
             <Tab.Screen 
-                name='marcasTab'
+                name='docsTab'
                 component={Docs}
                 options={{
-                    tabBarIcon: ({ color, size }) => <MaterialIcons name='directions-car' color={color} size={size} />
+                    tabBarIcon: ({ color, size }) => <FontAwesome name='book' color={color} size={size} />
                 }}
             />
             
             <Tab.Screen 
-                name='menuTab'
-                component={Sobre}
+                name='perfilTab'
+                component={Perfil}
                 options={{
-                    tabBarIcon: ({ color, size }) => <Entypo name='menu' color={color} size={size} />
+                    tabBarIcon: ({ color, size }) => <FontAwesome name='user' color={color} size={size} />
                 }}
             />
 
